@@ -24,14 +24,14 @@ module.exports = function(request, response){
 
 	//Проверки:
 	//Неправильный метод
-	if (route.method && route.methods.indexOf(request.method) < 0) {
+	if (route.methods.indexOf(request.method) < 0) {
 		response.writeHead(405);
 		response.write("Method not allowed!");
 		return response.end();
 	}
 
 	//Для данного запроса отсутствует обработчик
-	if (action == undefined) {
+	if (action == undefined || controller[action] == undefined) {
 		response.writeHead(421);
 		response.write("Bad request: method not exists");
 		return response.end();

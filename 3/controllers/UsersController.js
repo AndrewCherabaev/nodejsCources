@@ -15,11 +15,11 @@ module.exports = {
         response.writeHead(200, {'Content-Type': 'application/json'});
 
         if (request.method == "POST") {
-            response.write('At this time you can\'t edit item number #' + query.id);
+            response.write('"At this time you can\'t edit item number #' + query.id + '"');
         }
 
         if (request.method == "GET") {
-            response.write('You tried to GET item number #' + query.id + '. Try to POST it on this route');
+            response.write('"You tried to GET item number #' + query.id + '. Try to POST it on this route"');
         }
 
         response.end();
