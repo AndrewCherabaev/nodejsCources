@@ -1,0 +1,24 @@
+{
+    "/": {
+        "controller": "IndexController",
+        "action": "index",
+        "methods": ["GET"]
+    },
+    "/users": {
+        "controller": "UsersController",
+        "action":"index",
+        "methods": ["GET"]
+    },
+    "/users/show": {
+        "controller": "UsersController",
+        "action":"show",
+        "methods": ["GET"],
+        "required": ["id"]
+    },
+    "/users/edit": {
+        "controller": "UsersController",
+        "action":"edit",
+        "methods": ["GET", "POST"],
+        "required": ["id"]
+    }
+}
