@@ -1,0 +1,6 @@
+{
+	"log_favicon": false,
+	"server": {
+		"port": 3000
+	}
+}

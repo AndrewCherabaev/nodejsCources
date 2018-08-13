@@ -1,2 +1,4 @@
 /2/log.txt
 /3/log.txt
+/4/logs/*.*
+/4/node_modules
